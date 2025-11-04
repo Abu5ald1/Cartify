@@ -1,12 +1,14 @@
 package com.abu5ald.Cartify.service.product;
 
 import com.abu5ald.Cartify.model.Product;
+import com.abu5ald.Cartify.request.AddProductRequest;
+import com.abu5ald.Cartify.request.ProductUpdateRequest;
 
 import java.util.List;
 
 public interface IProductService {
-    Product addProduct(Product product);
-    Product updateProduct(Product product, Long productId);
+    Product addProduct(AddProductRequest request);
+    Product updateProduct(ProductUpdateRequest product, Long productId);
     void deleteProduct(Long id);
 
     Product getProductById(Long id);
